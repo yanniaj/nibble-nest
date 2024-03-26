@@ -1,0 +1,32 @@
+{
+  "name": "1.-inception",
+  "version": "1.0.0",
+  "description": "First chapter of namaste react",
+  "main": "script.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanniaj/ReactJS-course.git"
+  },
+  "keywords": [
+    "reactjs"
+  ],
+  "author": "Yanni Abi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yanniaj/ReactJS-course/issues"
+  },
+  "homepage": "https://github.com/yanniaj/ReactJS-course#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
