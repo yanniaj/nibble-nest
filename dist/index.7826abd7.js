@@ -2961,768 +2961,30 @@ var _header = require("./src/components/Header");
 var _headerDefault = parcelHelpers.interopDefault(_header);
 var _resCard = require("./src/components/ResCard");
 var _resCardDefault = parcelHelpers.interopDefault(_resCard);
-const resList = [
-    {
-        info: {
-            id: "424100",
-            name: "Thomson's Casa",
-            cloudinaryImageId: "g7ausfcdmu0nwyf4kkxe",
-            locality: "Ikkanda Warrier Road",
-            areaName: "Kizhakkumpattukara",
-            costForTwo: "\u20B9236 for two",
-            cuisines: [
-                "Chinese",
-                "South Indian",
-                "Ice Cream",
-                "Biryani"
-            ],
-            avgRating: 4.5,
-            parentId: "235965",
-            avgRatingString: "4.5",
-            totalRatingsString: "10K+",
-            sla: {
-                deliveryTime: 26,
-                lastMileTravel: 2.5,
-                serviceability: "SERVICEABLE",
-                slaString: "25-30 mins",
-                lastMileTravelString: "2.5 km",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2024-03-26 23:00:00",
-                opened: true
-            },
-            badges: {
-                imageBadges: [
-                    {
-                        imageId: "Rxawards/_CATEGORY-Biryani.png",
-                        description: "Delivery!"
-                    }
-                ]
-            },
-            isOpen: true,
-            type: "F",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {
-                        badgeObject: [
-                            {
-                                attributes: {
-                                    description: "Delivery!",
-                                    imageId: "Rxawards/_CATEGORY-Biryani.png"
-                                }
-                            }
-                        ]
-                    },
-                    textBased: {},
-                    textExtendedBadges: {}
-                }
-            },
-            aggregatedDiscountInfoV3: {
-                header: "50% OFF",
-                subHeader: "UPTO \u20B9100"
-            },
-            loyaltyDiscoverPresentationInfo: {
-                logoCtx: {
-                    logo: "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
-                },
-                freedelMessage: "FREE DELIVERY",
-                badgeType: "BADGE_TYPE_ONE_LITE"
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {
-            context: "seo-data-ac16c6fd-14ec-44b9-b2d3-6746b1c344f0"
-        },
-        cta: {
-            link: "https://www.swiggy.com/restaurants/thomsons-casa-ikkanda-warrier-road-kizhakkumpattukara-thrissur-424100",
-            text: "RESTAURANT_MENU",
-            type: "WEBLINK"
-        },
-        widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
-    },
-    {
-        info: {
-            id: "89736",
-            name: "Usha's Kitchen Vintage",
-            cloudinaryImageId: "z5ikbyjfqcwnorknngkf",
-            locality: "Thrissur Palghat Road",
-            areaName: "Mannuthy",
-            costForTwo: "\u20B9250 for two",
-            cuisines: [
-                "Chinese",
-                "North Indian",
-                "South Indian",
-                "Biryani"
-            ],
-            avgRating: 4.4,
-            parentId: "20709",
-            avgRatingString: "4.4",
-            totalRatingsString: "10K+",
-            sla: {
-                deliveryTime: 26,
-                lastMileTravel: 2.3,
-                serviceability: "SERVICEABLE",
-                slaString: "25-30 mins",
-                lastMileTravelString: "2.3 km",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2024-03-26 23:00:00",
-                opened: true
-            },
-            badges: {},
-            isOpen: true,
-            type: "F",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {},
-                    textBased: {},
-                    textExtendedBadges: {}
-                }
-            },
-            aggregatedDiscountInfoV3: {
-                header: "\u20B9175 OFF",
-                subHeader: "ABOVE \u20B9599",
-                discountTag: "FLAT DEAL"
-            },
-            loyaltyDiscoverPresentationInfo: {
-                logoCtx: {
-                    logo: "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
-                },
-                freedelMessage: "FREE DELIVERY",
-                badgeType: "BADGE_TYPE_ONE_LITE"
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {
-            context: "seo-data-ac16c6fd-14ec-44b9-b2d3-6746b1c344f0"
-        },
-        cta: {
-            link: "https://www.swiggy.com/restaurants/ushas-kitchen-vintage-palghat-road-mannuthy-thrissur-89736",
-            text: "RESTAURANT_MENU",
-            type: "WEBLINK"
-        },
-        widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
-    },
-    {
-        info: {
-            id: "74249",
-            name: "Arabian Grill - East Fort",
-            cloudinaryImageId: "amazd8xrtzooeutvlav4",
-            locality: "Thrissur - Palghat Rd",
-            areaName: "Kizhakkumpattukara",
-            costForTwo: "\u20B9250 for two",
-            cuisines: [
-                "Arabian",
-                "Biryani",
-                "North Indian",
-                "Chinese",
-                "Beverages",
-                "Kerala"
-            ],
-            avgRating: 4.2,
-            parentId: "35428",
-            avgRatingString: "4.2",
-            totalRatingsString: "10K+",
-            sla: {
-                deliveryTime: 40,
-                lastMileTravel: 2.9,
-                serviceability: "SERVICEABLE",
-                slaString: "40-45 mins",
-                lastMileTravelString: "2.9 km",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2024-03-26 23:59:00",
-                opened: true
-            },
-            badges: {},
-            isOpen: true,
-            type: "F",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {},
-                    textBased: {},
-                    textExtendedBadges: {}
-                }
-            },
-            aggregatedDiscountInfoV3: {
-                header: "\u20B980 OFF",
-                subHeader: "ABOVE \u20B9199",
-                discountTag: "FLAT DEAL"
-            },
-            loyaltyDiscoverPresentationInfo: {
-                logoCtx: {
-                    logo: "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
-                },
-                freedelMessage: "FREE DELIVERY",
-                badgeType: "BADGE_TYPE_ONE_LITE"
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {
-            context: "seo-data-ac16c6fd-14ec-44b9-b2d3-6746b1c344f0"
-        },
-        cta: {
-            link: "https://www.swiggy.com/restaurants/arabian-grill-east-fort-palghat-rd-kizhakkumpattukara-thrissur-74249",
-            text: "RESTAURANT_MENU",
-            type: "WEBLINK"
-        },
-        widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
-    },
-    {
-        info: {
-            id: "74531",
-            name: "Domino's Pizza",
-            cloudinaryImageId: "d0450ce1a6ba19ea60cd724471ed54a8",
-            locality: "RC Bishop House Road",
-            areaName: "Kizhakkumpattukara",
-            costForTwo: "\u20B9400 for two",
-            cuisines: [
-                "Pizzas",
-                "Italian",
-                "Pastas",
-                "Desserts"
-            ],
-            avgRating: 4.6,
-            parentId: "2456",
-            avgRatingString: "4.6",
-            totalRatingsString: "1K+",
-            sla: {
-                deliveryTime: 30,
-                lastMileTravel: 2.7,
-                serviceability: "SERVICEABLE",
-                slaString: "30 mins",
-                lastMileTravelString: "2.7 km",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2024-03-27 00:59:00",
-                opened: true
-            },
-            badges: {
-                imageBadges: [
-                    {
-                        imageId: "Rxawards/_CATEGORY-Pizza.png",
-                        description: "Delivery!"
-                    }
-                ]
-            },
-            isOpen: true,
-            type: "F",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {
-                        badgeObject: [
-                            {
-                                attributes: {
-                                    description: "Delivery!",
-                                    imageId: "Rxawards/_CATEGORY-Pizza.png"
-                                }
-                            }
-                        ]
-                    },
-                    textBased: {},
-                    textExtendedBadges: {}
-                }
-            },
-            aggregatedDiscountInfoV3: {
-                header: "\u20B9100 OFF",
-                subHeader: "ABOVE \u20B9999",
-                discountTag: "FLAT DEAL"
-            },
-            loyaltyDiscoverPresentationInfo: {
-                logoCtx: {
-                    logo: "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
-                },
-                freedelMessage: "FREE DELIVERY",
-                badgeType: "BADGE_TYPE_ONE_LITE"
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {
-            context: "seo-data-ac16c6fd-14ec-44b9-b2d3-6746b1c344f0"
-        },
-        cta: {
-            link: "https://www.swiggy.com/restaurants/dominos-pizza-rc-bishop-house-road-kizhakkumpattukara-thrissur-74531",
-            text: "RESTAURANT_MENU",
-            type: "WEBLINK"
-        },
-        widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
-    },
-    {
-        info: {
-            id: "85843",
-            name: "Burger Hub - East Fort",
-            cloudinaryImageId: "usjgkovpg8x1bminpehb",
-            locality: "East Fort",
-            areaName: "Kizhakkumpattukara",
-            costForTwo: "\u20B9250 for two",
-            cuisines: [
-                "Burgers"
-            ],
-            avgRating: 4.4,
-            favourite: true,
-            parentId: "20726",
-            avgRatingString: "4.4",
-            totalRatingsString: "10K+",
-            sla: {
-                deliveryTime: 31,
-                lastMileTravel: 2.7,
-                serviceability: "SERVICEABLE",
-                slaString: "30-35 mins",
-                lastMileTravelString: "2.7 km",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2024-03-26 22:00:00",
-                opened: true
-            },
-            badges: {},
-            isOpen: true,
-            type: "F",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {},
-                    textBased: {},
-                    textExtendedBadges: {}
-                }
-            },
-            aggregatedDiscountInfoV3: {
-                header: "60% OFF",
-                subHeader: "UPTO \u20B9120"
-            },
-            loyaltyDiscoverPresentationInfo: {
-                logoCtx: {
-                    logo: "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
-                },
-                freedelMessage: "FREE DELIVERY",
-                badgeType: "BADGE_TYPE_ONE_LITE"
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {
-            context: "seo-data-ac16c6fd-14ec-44b9-b2d3-6746b1c344f0"
-        },
-        cta: {
-            link: "https://www.swiggy.com/restaurants/burger-hub-east-fort-east-fort-kizhakkumpattukara-thrissur-85843",
-            text: "RESTAURANT_MENU",
-            type: "WEBLINK"
-        },
-        widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
-    },
-    {
-        info: {
-            id: "441729",
-            name: "Arun Ice Creams",
-            cloudinaryImageId: "clrts4slw09jlqaamrdt",
-            locality: "Vinpy Nagar",
-            areaName: "Kizhakkumpattukara",
-            costForTwo: "\u20B9200 for two",
-            cuisines: [
-                "Ice Cream"
-            ],
-            avgRating: 4.7,
-            veg: true,
-            parentId: "5797",
-            avgRatingString: "4.7",
-            totalRatingsString: "500+",
-            sla: {
-                deliveryTime: 16,
-                lastMileTravel: 1,
-                serviceability: "SERVICEABLE",
-                slaString: "15-20 mins",
-                lastMileTravelString: "1.0 km",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2024-03-26 21:30:00",
-                opened: true
-            },
-            badges: {},
-            isOpen: true,
-            type: "F",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {},
-                    textBased: {},
-                    textExtendedBadges: {}
-                }
-            },
-            loyaltyDiscoverPresentationInfo: {
-                logoCtx: {
-                    logo: "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
-                },
-                freedelMessage: "FREE DELIVERY",
-                badgeType: "BADGE_TYPE_ONE_LITE"
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {
-            context: "seo-data-ac16c6fd-14ec-44b9-b2d3-6746b1c344f0"
-        },
-        cta: {
-            link: "https://www.swiggy.com/restaurants/arun-ice-creams-vinpy-nagar-kizhakkumpattukara-thrissur-441729",
-            text: "RESTAURANT_MENU",
-            type: "WEBLINK"
-        },
-        widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
-    },
-    {
-        info: {
-            id: "86242",
-            name: "Burger Castle Cafe - East Fort",
-            cloudinaryImageId: "bctdwc5fvuq8kavblss3",
-            locality: "St Thomas College Road",
-            areaName: "Kizhakkumpattukara",
-            costForTwo: "\u20B9250 for two",
-            cuisines: [
-                "Pastas",
-                "Burgers",
-                "Ice Cream"
-            ],
-            avgRating: 4.4,
-            parentId: "20724",
-            avgRatingString: "4.4",
-            totalRatingsString: "10K+",
-            sla: {
-                deliveryTime: 39,
-                lastMileTravel: 3,
-                serviceability: "SERVICEABLE",
-                slaString: "35-40 mins",
-                lastMileTravelString: "3.0 km",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2024-03-27 01:59:00",
-                opened: true
-            },
-            badges: {},
-            isOpen: true,
-            type: "F",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {},
-                    textBased: {},
-                    textExtendedBadges: {}
-                }
-            },
-            aggregatedDiscountInfoV3: {
-                header: "\u20B9100 OFF",
-                subHeader: "ABOVE \u20B9199",
-                discountTag: "FLAT DEAL"
-            },
-            loyaltyDiscoverPresentationInfo: {
-                logoCtx: {
-                    logo: "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
-                },
-                freedelMessage: "FREE DELIVERY",
-                badgeType: "BADGE_TYPE_ONE_LITE"
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {
-            context: "seo-data-ac16c6fd-14ec-44b9-b2d3-6746b1c344f0"
-        },
-        cta: {
-            link: "https://www.swiggy.com/restaurants/burger-castle-cafe-east-fort-st-thomas-college-road-kizhakkumpattukara-thrissur-86242",
-            text: "RESTAURANT_MENU",
-            type: "WEBLINK"
-        },
-        widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
-    },
-    {
-        info: {
-            id: "73953",
-            name: "Hotel Akshaya - Chembotil Lane",
-            cloudinaryImageId: "mko07sgx8v9t3zmvllmb",
-            locality: "Chembottil Lane",
-            areaName: "Poothole",
-            costForTwo: "\u20B9200 for two",
-            cuisines: [
-                "Chinese",
-                "South Indian",
-                "Kerala",
-                "Biryani"
-            ],
-            avgRating: 4.5,
-            parentId: "20828",
-            avgRatingString: "4.5",
-            totalRatingsString: "10K+",
-            sla: {
-                deliveryTime: 29,
-                lastMileTravel: 4.2,
-                serviceability: "SERVICEABLE",
-                slaString: "25-30 mins",
-                lastMileTravelString: "4.2 km",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2024-03-27 00:00:00",
-                opened: true
-            },
-            badges: {},
-            isOpen: true,
-            type: "F",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {},
-                    textBased: {},
-                    textExtendedBadges: {}
-                }
-            },
-            aggregatedDiscountInfoV3: {
-                header: "\u20B980 OFF",
-                subHeader: "ABOVE \u20B9199",
-                discountTag: "FLAT DEAL"
-            },
-            loyaltyDiscoverPresentationInfo: {
-                logoCtx: {
-                    logo: "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
-                },
-                freedelMessage: "FREE DELIVERY",
-                badgeType: "BADGE_TYPE_ONE_LITE"
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {
-            context: "seo-data-ac16c6fd-14ec-44b9-b2d3-6746b1c344f0"
-        },
-        cta: {
-            link: "https://www.swiggy.com/restaurants/hotel-akshaya-chembotil-lane-chembottil-lane-poothole-thrissur-73953",
-            text: "RESTAURANT_MENU",
-            type: "WEBLINK"
-        },
-        widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
-    },
-    {
-        info: {
-            id: "112193",
-            name: "Hotel Maheswari",
-            cloudinaryImageId: "vzt8fovzhml4njfftz6u",
-            locality: "Christopher Nagar",
-            areaName: "Ollur",
-            costForTwo: "\u20B9250 for two",
-            cuisines: [
-                "Chinese",
-                "South Indian",
-                "Biryani"
-            ],
-            avgRating: 4.5,
-            veg: true,
-            parentId: "20606",
-            avgRatingString: "4.5",
-            totalRatingsString: "10K+",
-            sla: {
-                deliveryTime: 26,
-                lastMileTravel: 3.8,
-                serviceability: "SERVICEABLE",
-                slaString: "25-30 mins",
-                lastMileTravelString: "3.8 km",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2024-03-26 22:10:00",
-                opened: true
-            },
-            badges: {
-                imageBadges: [
-                    {
-                        imageId: "v1695133679/badges/Pure_Veg111.png",
-                        description: "pureveg"
-                    }
-                ]
-            },
-            isOpen: true,
-            type: "F",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {
-                        badgeObject: [
-                            {
-                                attributes: {
-                                    description: "pureveg",
-                                    imageId: "v1695133679/badges/Pure_Veg111.png"
-                                }
-                            }
-                        ]
-                    },
-                    textBased: {},
-                    textExtendedBadges: {}
-                }
-            },
-            loyaltyDiscoverPresentationInfo: {
-                logoCtx: {
-                    logo: "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
-                },
-                freedelMessage: "FREE DELIVERY",
-                badgeType: "BADGE_TYPE_ONE_LITE"
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {
-            context: "seo-data-ac16c6fd-14ec-44b9-b2d3-6746b1c344f0"
-        },
-        cta: {
-            link: "https://www.swiggy.com/restaurants/hotel-maheswari-christopher-nagar-ollur-thrissur-112193",
-            text: "RESTAURANT_MENU",
-            type: "WEBLINK"
-        },
-        widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
-    }
-];
+var _mockData2 = require("./src/utils/mockData2");
+var _mockData2Default = parcelHelpers.interopDefault(_mockData2);
+var _s = $RefreshSig$();
 const AppLayout = ()=>{
+    _s();
+    const [resList, setResList] = (0, _react.useState)((0, _mockData2Default.default));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "AppLayout",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 733,
+                lineNumber: 13,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                className: "filter-btn",
+                onClick: ()=>{
+                    const filteredList = resList.filter((res)=>res.info.avgRating >= 4.5);
+                    setResList(filteredList);
+                },
+                children: "Top rated restaurants"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 14,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3731,26 +2993,27 @@ const AppLayout = ()=>{
                         resData: restaurant
                     }, restaurant.info.id, false, {
                         fileName: "App.js",
-                        lineNumber: 736,
+                        lineNumber: 27,
                         columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 734,
+                lineNumber: 25,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "App.js",
-        lineNumber: 732,
+        lineNumber: 12,
         columnNumber: 5
     }, undefined);
 };
+_s(AppLayout, "kNUzr4vO69lla0a9ZCDDuxmQxS4=");
 _c = AppLayout;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 745,
+    lineNumber: 36,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -3761,7 +3024,7 @@ $RefreshReg$(_c, "AppLayout");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./src/components/Header":"knC38","./src/components/ResCard":"hYDpn"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./src/components/Header":"knC38","./src/components/ResCard":"hYDpn","./src/utils/mockData2":"gUTVj"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -28130,6 +27393,7 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _search = require("./Search");
 var _searchDefault = parcelHelpers.interopDefault(_search);
+var _constants = require("../utils/constants");
 const Header = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "header",
@@ -28137,16 +27401,16 @@ const Header = ()=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "logo-container",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    src: "https://i.pinimg.com/564x/82/be/d4/82bed479344270067e3d2171379949b3.jpg",
+                    src: (0, _constants.LOGO_URL),
                     alt: "corner-house-logo"
                 }, void 0, false, {
                     fileName: "src/components/Header.jsx",
-                    lineNumber: 8,
+                    lineNumber: 9,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Header.jsx",
-                lineNumber: 7,
+                lineNumber: 8,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28157,50 +27421,50 @@ const Header = ()=>{
                             children: "Home"
                         }, void 0, false, {
                             fileName: "src/components/Header.jsx",
-                            lineNumber: 15,
+                            lineNumber: 13,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _searchDefault.default), {}, void 0, false, {
                             fileName: "src/components/Header.jsx",
-                            lineNumber: 16,
+                            lineNumber: 14,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "About us"
                         }, void 0, false, {
                             fileName: "src/components/Header.jsx",
-                            lineNumber: 17,
+                            lineNumber: 15,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Contact us"
                         }, void 0, false, {
                             fileName: "src/components/Header.jsx",
-                            lineNumber: 18,
+                            lineNumber: 16,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Cart"
                         }, void 0, false, {
                             fileName: "src/components/Header.jsx",
-                            lineNumber: 19,
+                            lineNumber: 17,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Header.jsx",
-                    lineNumber: 14,
+                    lineNumber: 12,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Header.jsx",
-                lineNumber: 13,
+                lineNumber: 11,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Header.jsx",
-        lineNumber: 6,
+        lineNumber: 7,
         columnNumber: 5
     }, undefined);
 };
@@ -28214,7 +27478,7 @@ $RefreshReg$(_c, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Search":"1TO9L","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1TO9L":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Search":"1TO9L","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utils/constants":"hB8jg"}],"1TO9L":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$34ec = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -28273,7 +27537,15 @@ $RefreshReg$(_c, "Search");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hYDpn":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hB8jg":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "LOGO_URL", ()=>LOGO_URL);
+parcelHelpers.export(exports, "CDN_URL", ()=>CDN_URL);
+const LOGO_URL = "https://i.pinimg.com/564x/82/be/d4/82bed479344270067e3d2171379949b3.jpg";
+const CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hYDpn":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$d0ce = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -28285,25 +27557,26 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _constants = require("../utils/constants");
 const ResCard = (props)=>{
     const { resData } = props;
-    const { cloudinaryImageId, name, cuisines, avgRatingString } = resData?.info;
+    const { cloudinaryImageId, name, cuisines, avgRating } = resData?.info;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "res-card",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "image-container",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    src: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + cloudinaryImageId,
+                    src: (0, _constants.CDN_URL) + cloudinaryImageId,
                     alt: "corner-house"
                 }, void 0, false, {
                     fileName: "src/components/ResCard.jsx",
-                    lineNumber: 11,
+                    lineNumber: 12,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/ResCard.jsx",
-                lineNumber: 10,
+                lineNumber: 11,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28313,14 +27586,14 @@ const ResCard = (props)=>{
                         children: name
                     }, void 0, false, {
                         fileName: "src/components/ResCard.jsx",
-                        lineNumber: 20,
+                        lineNumber: 15,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                         children: cuisines.join(", ")
                     }, void 0, false, {
                         fileName: "src/components/ResCard.jsx",
-                        lineNumber: 21,
+                        lineNumber: 16,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
@@ -28333,31 +27606,31 @@ const ResCard = (props)=>{
                                     d: "M287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.2 22.6c9 1.3 16.5 7.6 19.3 16.3s.5 18.1-5.9 24.5L433.6 328.4l26.2 155.6c1.5 9-2.2 18.1-9.7 23.5s-17.3 6-25.3 1.7l-137-73.2L151 509.1c-8.1 4.3-17.9 3.7-25.3-1.7s-11.2-14.5-9.7-23.5l26.2-155.6L31.1 218.2c-6.5-6.4-8.7-15.9-5.9-24.5s10.3-14.9 19.3-16.3l153.2-22.6L266.3 13.5C270.4 5.2 278.7 0 287.9 0zm0 79L235.4 187.2c-3.5 7.1-10.2 12.1-18.1 13.3L99 217.9 184.9 303c5.5 5.5 8.1 13.3 6.8 21L171.4 443.7l105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2L384.2 324.1c-1.3-7.7 1.2-15.5 6.8-21l85.9-85.1L358.6 200.5c-7.8-1.2-14.6-6.1-18.1-13.3L287.9 79z"
                                 }, void 0, false, {
                                     fileName: "src/components/ResCard.jsx",
-                                    lineNumber: 24,
+                                    lineNumber: 19,
                                     columnNumber: 13
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/ResCard.jsx",
-                                lineNumber: 23,
+                                lineNumber: 18,
                                 columnNumber: 11
                             }, undefined),
-                            avgRatingString
+                            avgRating
                         ]
                     }, void 0, true, {
                         fileName: "src/components/ResCard.jsx",
-                        lineNumber: 22,
+                        lineNumber: 17,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/ResCard.jsx",
-                lineNumber: 19,
+                lineNumber: 14,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/ResCard.jsx",
-        lineNumber: 9,
+        lineNumber: 10,
         columnNumber: 5
     }, undefined);
 };
@@ -28371,6 +27644,372 @@ $RefreshReg$(_c, "ResCard");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["APLPM","1xC6H","2Ew96"], "2Ew96", "parcelRequire6945")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utils/constants":"hB8jg"}],"gUTVj":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+const resList = [
+    {
+        info: {
+            id: "737028",
+            name: "Kanti Sweets",
+            cloudinaryImageId: "60852362443f64a0017818f01301cddb",
+            locality: "Kaggadasapura",
+            areaName: "C V Raman Nagar New",
+            costForTwo: "\u20B9200 for two",
+            cuisines: [
+                "Sweets"
+            ],
+            avgRating: 4.6,
+            veg: true,
+            avgRatingString: "4.6",
+            totalRatingsString: "500+",
+            sla: {
+                deliveryTime: 16,
+                lastMileTravel: 1.3,
+                slaString: "15-20 mins"
+            }
+        }
+    },
+    {
+        info: {
+            id: "289253",
+            name: "BOX8 - Desi Meals",
+            cloudinaryImageId: "69a061b7e0f951cef2b4947946f94ec6",
+            locality: "Kaggadasapura",
+            areaName: "C V Raman Nagar",
+            costForTwo: "\u20B9250 for two",
+            cuisines: [
+                "North Indian",
+                "Biryani",
+                "Thalis",
+                "Home Food"
+            ],
+            avgRating: 4.5,
+            avgRatingString: "4.5",
+            totalRatingsString: "1K+",
+            sla: {
+                deliveryTime: 18,
+                lastMileTravel: 0.7,
+                slaString: "13-23 mins"
+            }
+        }
+    },
+    {
+        info: {
+            id: "613822",
+            name: "EatFit",
+            cloudinaryImageId: "a564ace38895abd960157ac2a76aaf2a",
+            locality: "Kaggadasapura Village",
+            areaName: "Mahadevapura",
+            costForTwo: "\u20B9270 for two",
+            cuisines: [
+                "Chinese",
+                "Healthy Food",
+                "Tandoor",
+                "Pizzas",
+                "North Indian",
+                "Thalis",
+                "Biryani"
+            ],
+            avgRating: 4.1,
+            avgRatingString: "4.1",
+            totalRatingsString: "1K+",
+            sla: {
+                deliveryTime: 20,
+                lastMileTravel: 0.9,
+                slaString: "20-25 mins"
+            }
+        }
+    },
+    {
+        info: {
+            id: "169353",
+            name: "Baskin Robbins - Ice Cream Desserts",
+            cloudinaryImageId: "85ccae4e3576f9330af102c46ca85395",
+            locality: "Basavanagar Main Road",
+            areaName: "Mahadevapura",
+            costForTwo: "\u20B9200 for two",
+            cuisines: [
+                "Ice Cream",
+                "Desserts"
+            ],
+            avgRating: 4.7,
+            veg: true,
+            avgRatingString: "4.7",
+            totalRatingsString: "1K+",
+            sla: {
+                deliveryTime: 20,
+                lastMileTravel: 2.5,
+                slaString: "20-25 mins"
+            }
+        }
+    },
+    {
+        info: {
+            id: "13225",
+            name: "Corner House Ice Cream",
+            cloudinaryImageId: "iomlahl1lex51s8xnyh7",
+            locality: "NGE F Layout",
+            areaName: "Banaswadi",
+            costForTwo: "\u20B9250 for two",
+            cuisines: [
+                "Ice Cream",
+                "Desserts"
+            ],
+            avgRating: 4.7,
+            avgRatingString: "4.7",
+            totalRatingsString: "10K+",
+            sla: {
+                deliveryTime: 29,
+                lastMileTravel: 5,
+                slaString: "25-30 mins"
+            }
+        }
+    },
+    {
+        info: {
+            id: "10828",
+            name: "California Burrito",
+            cloudinaryImageId: "c5zl1drlxojljm21pz2p",
+            locality: "Outer Ring Road",
+            areaName: "Mahadevpura",
+            costForTwo: "\u20B9400 for two",
+            cuisines: [
+                "Mexican",
+                "American",
+                "Salads",
+                "Continental",
+                "Keto",
+                "Healthy Food"
+            ],
+            avgRating: 4.6,
+            avgRatingString: "4.6",
+            totalRatingsString: "5K+",
+            sla: {
+                deliveryTime: 31,
+                lastMileTravel: 4.1,
+                slaString: "30-35 mins"
+            }
+        }
+    },
+    {
+        info: {
+            id: "13730",
+            name: "Beijing Bites",
+            cloudinaryImageId: "ca0eb08d0635fd6da2e5a480fec897d0",
+            locality: "CV Raman Nagar",
+            areaName: "CV Raman Nagar",
+            costForTwo: "\u20B9450 for two",
+            cuisines: [
+                "Chinese",
+                "Thai"
+            ],
+            avgRating: 4.3,
+            avgRatingString: "4.3",
+            totalRatingsString: "10K+",
+            sla: {
+                deliveryTime: 20,
+                lastMileTravel: 1.1,
+                slaString: "15-20 mins"
+            }
+        }
+    },
+    {
+        info: {
+            id: "186087",
+            name: "The Biryani Life",
+            cloudinaryImageId: "ymeyunqgdza647yobtaf",
+            locality: "FRMS LAND MARK APARTMENT",
+            areaName: "Kaggadasapura",
+            costForTwo: "\u20B9250 for two",
+            cuisines: [
+                "Biryani",
+                "Mughlai",
+                "Lucknowi",
+                "Hyderabadi",
+                "Kebabs",
+                "Desserts",
+                "Beverages"
+            ],
+            avgRating: 3.6,
+            avgRatingString: "3.6",
+            totalRatingsString: "1K+",
+            sla: {
+                deliveryTime: 25,
+                lastMileTravel: 1.3,
+                slaString: "20-25 mins"
+            }
+        }
+    },
+    {
+        info: {
+            id: "246128",
+            name: "Hotel Empire",
+            cloudinaryImageId: "visisdwdnhzflxgsjpvl",
+            locality: "Garudachar Palya",
+            areaName: "Mahadevpura",
+            costForTwo: "\u20B9250 for two",
+            cuisines: [
+                "North Indian",
+                "Kebabs",
+                "Biryani"
+            ],
+            avgRating: 4.1,
+            avgRatingString: "4.1",
+            totalRatingsString: "10K+",
+            sla: {
+                deliveryTime: 37,
+                lastMileTravel: 4.8,
+                slaString: "35-40 mins"
+            }
+        }
+    },
+    {
+        info: {
+            id: "239069",
+            name: "McDonald's",
+            cloudinaryImageId: "f62564e14944753903849c4ef673af4d",
+            locality: "Virtous Mall",
+            areaName: "KR Puram",
+            costForTwo: "\u20B9400 for two",
+            cuisines: [
+                "Burgers",
+                "Beverages",
+                "Cafe",
+                "Desserts"
+            ],
+            avgRating: 4.3,
+            avgRatingString: "4.3",
+            totalRatingsString: "5K+",
+            sla: {
+                deliveryTime: 32,
+                lastMileTravel: 3.9,
+                slaString: "30-35 mins"
+            }
+        }
+    },
+    {
+        info: {
+            id: "810328",
+            name: "Polar bear",
+            cloudinaryImageId: "438ceb57212cc8476461e9753643126f",
+            locality: "Vignan Nagar",
+            areaName: "CV Raman Nagar",
+            costForTwo: "\u20B9350 for two",
+            cuisines: [
+                "Ice Cream",
+                "Ice Cream Cakes"
+            ],
+            avgRating: 4.5,
+            avgRatingString: "4.5",
+            totalRatingsString: "20+",
+            sla: {
+                deliveryTime: 19,
+                lastMileTravel: 1.5,
+                slaString: "15-20 mins"
+            }
+        }
+    },
+    {
+        info: {
+            id: "653628",
+            name: "Chinese Wok",
+            cloudinaryImageId: "e0839ff574213e6f35b3899ebf1fc597",
+            locality: "Phoenix Market City",
+            areaName: "Mahadevapura",
+            costForTwo: "\u20B9250 for two",
+            cuisines: [
+                "Chinese",
+                "Asian",
+                "Tibetan",
+                "Desserts"
+            ],
+            avgRating: 4,
+            avgRatingString: "4.0",
+            totalRatingsString: "100+",
+            sla: {
+                deliveryTime: 43,
+                lastMileTravel: 3.8,
+                slaString: "40-45 mins"
+            }
+        }
+    },
+    {
+        info: {
+            id: "285116",
+            name: "Dindigul Thalappakatti",
+            cloudinaryImageId: "qcoeeteu67eei7wlomdp",
+            locality: "Garudacharpalya",
+            areaName: "Whitefield",
+            costForTwo: "\u20B9600 for two",
+            cuisines: [
+                "Biryani",
+                "Barbecue",
+                "South Indian",
+                "Chinese",
+                "North Indian"
+            ],
+            avgRating: 4.1,
+            avgRatingString: "4.1",
+            totalRatingsString: "5K+",
+            sla: {
+                deliveryTime: 29,
+                lastMileTravel: 4.2,
+                slaString: "25-30 mins"
+            }
+        }
+    },
+    {
+        info: {
+            id: "5167",
+            name: "Theobroma",
+            cloudinaryImageId: "63dd75492c47fcec191132b8eb299ea5",
+            locality: "2nd stage",
+            areaName: "Indiranagar",
+            costForTwo: "\u20B9400 for two",
+            cuisines: [
+                "Bakery",
+                "Desserts",
+                "Beverages"
+            ],
+            avgRating: 4.6,
+            favourite: true,
+            avgRatingString: "4.6",
+            totalRatingsString: "10K+",
+            sla: {
+                deliveryTime: 34,
+                lastMileTravel: 5.6,
+                slaString: "30-35 mins"
+            }
+        }
+    },
+    {
+        info: {
+            id: "457308",
+            name: "Bakingo",
+            cloudinaryImageId: "e28bacacd405a62eb7f61d4b929ff9d6",
+            locality: "New Thipasandra",
+            areaName: "Indiranagar",
+            costForTwo: "\u20B9300 for two",
+            cuisines: [
+                "Bakery",
+                "Desserts",
+                "Beverages",
+                "Snacks"
+            ],
+            avgRating: 4.4,
+            avgRatingString: "4.4",
+            totalRatingsString: "1K+",
+            sla: {
+                deliveryTime: 30,
+                lastMileTravel: 5,
+                slaString: "30-35 mins"
+            }
+        }
+    }
+];
+exports.default = resList;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["APLPM","1xC6H","2Ew96"], "2Ew96", "parcelRequire6945")
 
 //# sourceMappingURL=index.7826abd7.js.map

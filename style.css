@@ -49,18 +49,18 @@ body {
   margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: center;
 }
 
 .res-card {
   display: flex;
   flex-direction: column;
-  margin: 30px;
+  margin: 15px;
   padding: 10px;
   box-shadow: 0 4px 8px 0 rgba(150, 150, 150, 0.1),
     0 6px 20px 0 rgba(150, 150, 150, 0.25);
   border-radius: 10%;
-  max-width: 250px;
+  max-width: 280px;
   width: 100%;
 }
 
@@ -75,8 +75,8 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  width: 280px;
+  height: 200px;
   border-radius: 16px;
   overflow: hidden;
   border-radius: 10%;
@@ -84,31 +84,34 @@ body {
 
 .image-container img {
   flex: 3;
-  /* width: 100%;
-  height: 100%; */
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
 }
 
 .product-details {
   flex: 2;
-  padding-bottom: 5px;
 }
 
-.res-card h3 {
+.product-details h3 {
+  height: 20px;
+}
+
+.product-details p {
   height: 10px;
-}
-
-.res-card p {
-  line-height: 100%;
+  padding: 10px 0;
   font-size: 14px;
   opacity: 0.5;
 }
 
 .res-card h4 svg {
   height: 20px;
-  width: 10px;
-  padding-right: 10px;
+  width: 15px;
+  padding: 0 10px 0 5px;
+  vertical-align: top;
+}
+
+.res-card h4 {
+  font-size: 18px;
 }
