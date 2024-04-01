@@ -43,6 +43,37 @@ body {
   padding: 0 10px;
 }
 
+.filter-btn {
+  --button_radius: .75em;
+  --button_color: #000;
+  --button_outline_color: #b2b2b2;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.button_top {
+  box-sizing: border-box;
+  border: 1px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  background: var(--button_color);
+  color: #fff;
+  padding: .75em .5em;
+  transition: transform .1s;
+  display: block;
+  transform: translateY(-.2em);
+}
+
+.filter-btn:hover .button_top {
+  transform: translateY(-.33em);
+}
+
+.filter-btn:active .button_top {
+  transform: translateY(0);
+}
+
 .main-container {
   flex-wrap: wrap;
   justify-content: center;

@@ -2,11 +2,23 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./src/components/Header";
 import ResCard from "./src/components/ResCard";
-import mockData from "./src/utils/mockData2";
-import { useState } from "react";
+import resList from "./src/utils/mockData2";
+import { useState, useEffect } from "react";
 
 const AppLayout = () => {
-  const [resList, setResList] = useState(mockData);
+  const [listOfRestaurants, setListOfRestaurants] = useState(resList);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    const data = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=10.51694058302456&lng=76.24346863478422&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+    );
+    const json = await data.json();
+    console.log(json);
+  };
 
   return (
     <div className="AppLayout">
@@ -14,16 +26,16 @@ const AppLayout = () => {
       <button
         className="filter-btn"
         onClick={() => {
-          const filteredList = resList.filter(
+          const filteredList = listOfRestaurants.filter(
             (res) => res.info.avgRating >= 4.5
           );
-          setResList(filteredList);
+          setListOfRestaurants(filteredList);
         }}
       >
-        Top rated restaurants
+        <span className="button_top"> Top rated restaurants</span>
       </button>
       <div className="main-container">
-        {resList.map((restaurant) => (
+        {listOfRestaurants.map((restaurant) => (
           <ResCard key={restaurant.info.id} resData={restaurant} />
         ))}
       </div>

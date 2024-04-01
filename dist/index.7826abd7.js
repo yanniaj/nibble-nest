@@ -2966,54 +2966,69 @@ var _mockData2Default = parcelHelpers.interopDefault(_mockData2);
 var _s = $RefreshSig$();
 const AppLayout = ()=>{
     _s();
-    const [resList, setResList] = (0, _react.useState)((0, _mockData2Default.default));
+    const [listOfRestaurants, setListOfRestaurants] = (0, _react.useState)((0, _mockData2Default.default));
+    (0, _react.useEffect)(()=>{
+        fetchData();
+    }, []);
+    const fetchData = async ()=>{
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=10.51694058302456&lng=76.24346863478422&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const json = await data.json();
+        console.log(json);
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "AppLayout",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 13,
+                lineNumber: 25,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                 className: "filter-btn",
                 onClick: ()=>{
-                    const filteredList = resList.filter((res)=>res.info.avgRating >= 4.5);
-                    setResList(filteredList);
+                    const filteredList = listOfRestaurants.filter((res)=>res.info.avgRating >= 4.5);
+                    setListOfRestaurants(filteredList);
                 },
-                children: "Top rated restaurants"
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                    className: "button_top",
+                    children: " Top rated restaurants"
+                }, void 0, false, {
+                    fileName: "App.js",
+                    lineNumber: 35,
+                    columnNumber: 9
+                }, undefined)
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 14,
+                lineNumber: 26,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "main-container",
-                children: resList.map((restaurant)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _resCardDefault.default), {
+                children: listOfRestaurants.map((restaurant)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _resCardDefault.default), {
                         resData: restaurant
                     }, restaurant.info.id, false, {
                         fileName: "App.js",
-                        lineNumber: 27,
+                        lineNumber: 39,
                         columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 25,
+                lineNumber: 37,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "App.js",
-        lineNumber: 12,
+        lineNumber: 24,
         columnNumber: 5
     }, undefined);
 };
-_s(AppLayout, "kNUzr4vO69lla0a9ZCDDuxmQxS4=");
+_s(AppLayout, "5HM01kHHgmz9UzCrXMrVVIUJ1QI=");
 _c = AppLayout;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 36,
+    lineNumber: 48,
     columnNumber: 13
 }, undefined));
 var _c;
