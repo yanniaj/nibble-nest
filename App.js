@@ -31,17 +31,6 @@ const AppLayout = () => {
   ) : (
     <div className="AppLayout">
       <Header />
-      {/* <button
-        className="filter-btn"
-        onClick={() => {
-          const filteredList = listOfRestaurants.filter(
-            (res) => res.info.avgRating >= 4.5
-          );
-          setListOfRestaurants(filteredList);
-        }}
-      >
-        <span className="button_top"> Top rated restaurants</span>
-      </button> */}
       <div className="main-container">
         {listOfRestaurants.map((restaurant) => (
           <ResCard key={restaurant.info.id} resData={restaurant} />
