@@ -1,11 +1,21 @@
 import React from "react";
 import { CDN_URL } from "../utils/constants";
+import { useState, useEffect } from "react";
 
 const ResCard = (props) => {
   const { resData } = props;
-
   const { cloudinaryImageId, name, cuisines, avgRating, sla, areaName } =
     resData?.info;
+
+  const cuisine = cuisines.join(", ");
+  const [dish, setDish] = useState(cuisine);
+
+  useEffect(() => {
+    const totalChars = cuisine.length;
+    setDish(totalChars >= 30 ? cuisine.slice(0, 35) + "..." : cuisine);
+  }, [cuisine]);
+
+  const totalChars = cuisine.length;
 
   return (
     <div className="res-card">
@@ -13,8 +23,8 @@ const ResCard = (props) => {
         <img src={CDN_URL + cloudinaryImageId} alt="corner-house" />
       </div>
       <div className="product-details">
-        <h3>{name}</h3>
-        <div>
+        <h3 className="rest-name">{name}</h3>
+        <div className="rating">
           <svg
             width="30"
             height="30"
@@ -53,8 +63,8 @@ const ResCard = (props) => {
           <span style={{ lineHeight: "5px", fontSize: "30px" }}>.</span>
           <span>{sla.slaString}</span>
         </div>
-        <p>{cuisines.join(", ")}</p>
-        <p style={{ padding: "10px 0" }}>{areaName}</p>
+        <p className="cuisines">{dish}</p>
+        <p className="location">{areaName}</p>
       </div>
     </div>
   );

@@ -2,11 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./src/components/Header";
 import ResCard from "./src/components/ResCard";
-import resList from "./src/utils/mockData2";
+import Shimmer from "./src/components/Shimmer";
 import { useState, useEffect } from "react";
 
 const AppLayout = () => {
-  const [listOfRestaurants, setListOfRestaurants] = useState(resList);
+  const [listOfRestaurants, setListOfRestaurants] = useState([]);
 
   useEffect(() => {
     fetchData();
@@ -19,14 +19,19 @@ const AppLayout = () => {
     const json = await data.json();
     console.log(json);
     setListOfRestaurants(
-      json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
 
-  return (
+  return listOfRestaurants.length === 0 ? ( // Conditional rendering
+    <>
+      <Header />
+      <Shimmer />
+    </>
+  ) : (
     <div className="AppLayout">
       <Header />
-      <button
+      {/* <button
         className="filter-btn"
         onClick={() => {
           const filteredList = listOfRestaurants.filter(
@@ -36,7 +41,7 @@ const AppLayout = () => {
         }}
       >
         <span className="button_top"> Top rated restaurants</span>
-      </button>
+      </button> */}
       <div className="main-container">
         {listOfRestaurants.map((restaurant) => (
           <ResCard key={restaurant.info.id} resData={restaurant} />

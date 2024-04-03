@@ -2961,12 +2961,12 @@ var _header = require("./src/components/Header");
 var _headerDefault = parcelHelpers.interopDefault(_header);
 var _resCard = require("./src/components/ResCard");
 var _resCardDefault = parcelHelpers.interopDefault(_resCard);
-var _mockData2 = require("./src/utils/mockData2");
-var _mockData2Default = parcelHelpers.interopDefault(_mockData2);
+var _shimmer = require("./src/components/Shimmer");
+var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
 var _s = $RefreshSig$();
 const AppLayout = ()=>{
     _s();
-    const [listOfRestaurants, setListOfRestaurants] = (0, _react.useState)((0, _mockData2Default.default));
+    const [listOfRestaurants, setListOfRestaurants] = (0, _react.useState)([]);
     (0, _react.useEffect)(()=>{
         fetchData();
     }, []);
@@ -2974,33 +2974,27 @@ const AppLayout = ()=>{
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=10.51694058302456&lng=76.24346863478422&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const json = await data.json();
         console.log(json);
-        setListOfRestaurants(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
+        setListOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "AppLayout",
+    return listOfRestaurants.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "App.js",
                 lineNumber: 28,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                className: "filter-btn",
-                onClick: ()=>{
-                    const filteredList = listOfRestaurants.filter((res)=>res.info.avgRating >= 4.5);
-                    setListOfRestaurants(filteredList);
-                },
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                    className: "button_top",
-                    children: " Top rated restaurants"
-                }, void 0, false, {
-                    fileName: "App.js",
-                    lineNumber: 38,
-                    columnNumber: 9
-                }, undefined)
-            }, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
                 fileName: "App.js",
                 lineNumber: 29,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "AppLayout",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 33,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3009,27 +3003,27 @@ const AppLayout = ()=>{
                         resData: restaurant
                     }, restaurant.info.id, false, {
                         fileName: "App.js",
-                        lineNumber: 42,
+                        lineNumber: 47,
                         columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 40,
+                lineNumber: 45,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "App.js",
-        lineNumber: 27,
+        lineNumber: 32,
         columnNumber: 5
     }, undefined);
 };
-_s(AppLayout, "5HM01kHHgmz9UzCrXMrVVIUJ1QI=");
+_s(AppLayout, "UiDdifLDylk9/nIIRtpBnM10fwg=");
 _c = AppLayout;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 51,
+    lineNumber: 56,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -3040,7 +3034,7 @@ $RefreshReg$(_c, "AppLayout");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./src/components/Header":"knC38","./src/components/ResCard":"hYDpn","./src/utils/mockData2":"gUTVj"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./src/components/Header":"knC38","./src/components/ResCard":"hYDpn","./src/components/Shimmer":"imnNo"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27410,7 +27404,10 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _search = require("./Search");
 var _searchDefault = parcelHelpers.interopDefault(_search);
 var _constants = require("../utils/constants");
+var _s = $RefreshSig$();
 const Header = ()=>{
+    _s();
+    const [authState, setAuthState] = (0, _react.useState)("Log in");
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "header",
         children: [
@@ -27421,12 +27418,12 @@ const Header = ()=>{
                     alt: "corner-house-logo"
                 }, void 0, false, {
                     fileName: "src/components/Header.jsx",
-                    lineNumber: 9,
+                    lineNumber: 12,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Header.jsx",
-                lineNumber: 8,
+                lineNumber: 11,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27437,53 +27434,65 @@ const Header = ()=>{
                             children: "Home"
                         }, void 0, false, {
                             fileName: "src/components/Header.jsx",
-                            lineNumber: 13,
+                            lineNumber: 16,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _searchDefault.default), {}, void 0, false, {
                             fileName: "src/components/Header.jsx",
-                            lineNumber: 14,
+                            lineNumber: 17,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "About us"
                         }, void 0, false, {
                             fileName: "src/components/Header.jsx",
-                            lineNumber: 15,
+                            lineNumber: 18,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Contact us"
                         }, void 0, false, {
                             fileName: "src/components/Header.jsx",
-                            lineNumber: 16,
+                            lineNumber: 19,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Cart"
                         }, void 0, false, {
                             fileName: "src/components/Header.jsx",
-                            lineNumber: 17,
+                            lineNumber: 20,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            onClick: ()=>setAuthState(authState === "Log in" ? "Log out" : "Log in"),
+                            style: {
+                                width: "80px"
+                            },
+                            children: authState
+                        }, void 0, false, {
+                            fileName: "src/components/Header.jsx",
+                            lineNumber: 21,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Header.jsx",
-                    lineNumber: 12,
+                    lineNumber: 15,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Header.jsx",
-                lineNumber: 11,
+                lineNumber: 14,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Header.jsx",
-        lineNumber: 7,
+        lineNumber: 10,
         columnNumber: 5
     }, undefined);
 };
+_s(Header, "/FuqevIUEK82bMJrXQplgWjfgx0=");
 _c = Header;
 exports.default = Header;
 var _c;
@@ -27530,7 +27539,10 @@ const Search = ()=>{
                 type: "text",
                 name: "search",
                 id: "search",
-                placeholder: "SEARCH"
+                placeholder: "SEARCH",
+                style: {
+                    color: "white"
+                }
             }, void 0, false, {
                 fileName: "src/components/Search.jsx",
                 lineNumber: 12,
@@ -27574,9 +27586,20 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _constants = require("../utils/constants");
+var _s = $RefreshSig$();
 const ResCard = (props)=>{
+    _s();
     const { resData } = props;
     const { cloudinaryImageId, name, cuisines, avgRating, sla, areaName } = resData?.info;
+    const cuisine = cuisines.join(", ");
+    const [dish, setDish] = (0, _react.useState)(cuisine);
+    (0, _react.useEffect)(()=>{
+        const totalChars = cuisine.length;
+        setDish(totalChars >= 30 ? cuisine.slice(0, 35) + "..." : cuisine);
+    }, [
+        cuisine
+    ]);
+    const totalChars = cuisine.length;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "res-card",
         children: [
@@ -27587,25 +27610,27 @@ const ResCard = (props)=>{
                     alt: "corner-house"
                 }, void 0, false, {
                     fileName: "src/components/ResCard.jsx",
-                    lineNumber: 13,
+                    lineNumber: 23,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/ResCard.jsx",
-                lineNumber: 12,
+                lineNumber: 22,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "product-details",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                        className: "rest-name",
                         children: name
                     }, void 0, false, {
                         fileName: "src/components/ResCard.jsx",
-                        lineNumber: 16,
+                        lineNumber: 26,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "rating",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
                                 width: "30",
@@ -27624,7 +27649,7 @@ const ResCard = (props)=>{
                                         fill: "url(#StoreRating20_svg__paint0_linear_32982_71567)"
                                     }, void 0, false, {
                                         fileName: "src/components/ResCard.jsx",
-                                        lineNumber: 28,
+                                        lineNumber: 38,
                                         columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
@@ -27632,7 +27657,7 @@ const ResCard = (props)=>{
                                         fill: "white"
                                     }, void 0, false, {
                                         fileName: "src/components/ResCard.jsx",
-                                        lineNumber: 34,
+                                        lineNumber: 44,
                                         columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("defs", {
@@ -27648,7 +27673,7 @@ const ResCard = (props)=>{
                                                     "stop-color": "#21973B"
                                                 }, void 0, false, {
                                                     fileName: "src/components/ResCard.jsx",
-                                                    lineNumber: 47,
+                                                    lineNumber: 57,
                                                     columnNumber: 17
                                                 }, undefined),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("stop", {
@@ -27656,31 +27681,31 @@ const ResCard = (props)=>{
                                                     "stop-color": "#128540"
                                                 }, void 0, false, {
                                                     fileName: "src/components/ResCard.jsx",
-                                                    lineNumber: 48,
+                                                    lineNumber: 58,
                                                     columnNumber: 17
                                                 }, undefined)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/components/ResCard.jsx",
-                                            lineNumber: 39,
+                                            lineNumber: 49,
                                             columnNumber: 15
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/components/ResCard.jsx",
-                                        lineNumber: 38,
+                                        lineNumber: 48,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/ResCard.jsx",
-                                lineNumber: 18,
+                                lineNumber: 28,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                 children: avgRating
                             }, void 0, false, {
                                 fileName: "src/components/ResCard.jsx",
-                                lineNumber: 52,
+                                lineNumber: 62,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -27691,52 +27716,52 @@ const ResCard = (props)=>{
                                 children: "."
                             }, void 0, false, {
                                 fileName: "src/components/ResCard.jsx",
-                                lineNumber: 53,
+                                lineNumber: 63,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                 children: sla.slaString
                             }, void 0, false, {
                                 fileName: "src/components/ResCard.jsx",
-                                lineNumber: 54,
+                                lineNumber: 64,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/ResCard.jsx",
-                        lineNumber: 17,
+                        lineNumber: 27,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: cuisines.join(", ")
+                        className: "cuisines",
+                        children: dish
                     }, void 0, false, {
                         fileName: "src/components/ResCard.jsx",
-                        lineNumber: 56,
+                        lineNumber: 66,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        style: {
-                            padding: "10px 0"
-                        },
+                        className: "location",
                         children: areaName
                     }, void 0, false, {
                         fileName: "src/components/ResCard.jsx",
-                        lineNumber: 57,
+                        lineNumber: 67,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/ResCard.jsx",
-                lineNumber: 15,
+                lineNumber: 25,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/ResCard.jsx",
-        lineNumber: 11,
+        lineNumber: 21,
         columnNumber: 5
     }, undefined);
 };
+_s(ResCard, "Dkpd22Rd1S1zFwmh93DP4cRVQ5M=");
 _c = ResCard;
 exports.default = ResCard;
 var _c;
@@ -27747,372 +27772,95 @@ $RefreshReg$(_c, "ResCard");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utils/constants":"hB8jg"}],"gUTVj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utils/constants":"hB8jg"}],"imnNo":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0b57 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0b57.prelude(module);
+
+try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-const resList = [
-    {
-        info: {
-            id: "737028",
-            name: "Kanti Sweets",
-            cloudinaryImageId: "60852362443f64a0017818f01301cddb",
-            locality: "Kaggadasapura",
-            areaName: "C V Raman Nagar New",
-            costForTwo: "\u20B9200 for two",
-            cuisines: [
-                "Sweets"
-            ],
-            avgRating: 4.6,
-            veg: true,
-            avgRatingString: "4.6",
-            totalRatingsString: "500+",
-            sla: {
-                deliveryTime: 16,
-                lastMileTravel: 1.3,
-                slaString: "15-20 mins"
-            }
-        }
-    },
-    {
-        info: {
-            id: "289253",
-            name: "BOX8 - Desi Meals",
-            cloudinaryImageId: "69a061b7e0f951cef2b4947946f94ec6",
-            locality: "Kaggadasapura",
-            areaName: "C V Raman Nagar",
-            costForTwo: "\u20B9250 for two",
-            cuisines: [
-                "North Indian",
-                "Biryani",
-                "Thalis",
-                "Home Food"
-            ],
-            avgRating: 4.5,
-            avgRatingString: "4.5",
-            totalRatingsString: "1K+",
-            sla: {
-                deliveryTime: 18,
-                lastMileTravel: 0.7,
-                slaString: "13-23 mins"
-            }
-        }
-    },
-    {
-        info: {
-            id: "613822",
-            name: "EatFit",
-            cloudinaryImageId: "a564ace38895abd960157ac2a76aaf2a",
-            locality: "Kaggadasapura Village",
-            areaName: "Mahadevapura",
-            costForTwo: "\u20B9270 for two",
-            cuisines: [
-                "Chinese",
-                "Healthy Food",
-                "Tandoor",
-                "Pizzas",
-                "North Indian",
-                "Thalis",
-                "Biryani"
-            ],
-            avgRating: 4.1,
-            avgRatingString: "4.1",
-            totalRatingsString: "1K+",
-            sla: {
-                deliveryTime: 20,
-                lastMileTravel: 0.9,
-                slaString: "20-25 mins"
-            }
-        }
-    },
-    {
-        info: {
-            id: "169353",
-            name: "Baskin Robbins - Ice Cream Desserts",
-            cloudinaryImageId: "85ccae4e3576f9330af102c46ca85395",
-            locality: "Basavanagar Main Road",
-            areaName: "Mahadevapura",
-            costForTwo: "\u20B9200 for two",
-            cuisines: [
-                "Ice Cream",
-                "Desserts"
-            ],
-            avgRating: 4.7,
-            veg: true,
-            avgRatingString: "4.7",
-            totalRatingsString: "1K+",
-            sla: {
-                deliveryTime: 20,
-                lastMileTravel: 2.5,
-                slaString: "20-25 mins"
-            }
-        }
-    },
-    {
-        info: {
-            id: "13225",
-            name: "Corner House Ice Cream",
-            cloudinaryImageId: "iomlahl1lex51s8xnyh7",
-            locality: "NGE F Layout",
-            areaName: "Banaswadi",
-            costForTwo: "\u20B9250 for two",
-            cuisines: [
-                "Ice Cream",
-                "Desserts"
-            ],
-            avgRating: 4.7,
-            avgRatingString: "4.7",
-            totalRatingsString: "10K+",
-            sla: {
-                deliveryTime: 29,
-                lastMileTravel: 5,
-                slaString: "25-30 mins"
-            }
-        }
-    },
-    {
-        info: {
-            id: "10828",
-            name: "California Burrito",
-            cloudinaryImageId: "c5zl1drlxojljm21pz2p",
-            locality: "Outer Ring Road",
-            areaName: "Mahadevpura",
-            costForTwo: "\u20B9400 for two",
-            cuisines: [
-                "Mexican",
-                "American",
-                "Salads",
-                "Continental",
-                "Keto",
-                "Healthy Food"
-            ],
-            avgRating: 4.6,
-            avgRatingString: "4.6",
-            totalRatingsString: "5K+",
-            sla: {
-                deliveryTime: 31,
-                lastMileTravel: 4.1,
-                slaString: "30-35 mins"
-            }
-        }
-    },
-    {
-        info: {
-            id: "13730",
-            name: "Beijing Bites",
-            cloudinaryImageId: "ca0eb08d0635fd6da2e5a480fec897d0",
-            locality: "CV Raman Nagar",
-            areaName: "CV Raman Nagar",
-            costForTwo: "\u20B9450 for two",
-            cuisines: [
-                "Chinese",
-                "Thai"
-            ],
-            avgRating: 4.3,
-            avgRatingString: "4.3",
-            totalRatingsString: "10K+",
-            sla: {
-                deliveryTime: 20,
-                lastMileTravel: 1.1,
-                slaString: "15-20 mins"
-            }
-        }
-    },
-    {
-        info: {
-            id: "186087",
-            name: "The Biryani Life",
-            cloudinaryImageId: "ymeyunqgdza647yobtaf",
-            locality: "FRMS LAND MARK APARTMENT",
-            areaName: "Kaggadasapura",
-            costForTwo: "\u20B9250 for two",
-            cuisines: [
-                "Biryani",
-                "Mughlai",
-                "Lucknowi",
-                "Hyderabadi",
-                "Kebabs",
-                "Desserts",
-                "Beverages"
-            ],
-            avgRating: 3.6,
-            avgRatingString: "3.6",
-            totalRatingsString: "1K+",
-            sla: {
-                deliveryTime: 25,
-                lastMileTravel: 1.3,
-                slaString: "20-25 mins"
-            }
-        }
-    },
-    {
-        info: {
-            id: "246128",
-            name: "Hotel Empire",
-            cloudinaryImageId: "visisdwdnhzflxgsjpvl",
-            locality: "Garudachar Palya",
-            areaName: "Mahadevpura",
-            costForTwo: "\u20B9250 for two",
-            cuisines: [
-                "North Indian",
-                "Kebabs",
-                "Biryani"
-            ],
-            avgRating: 4.1,
-            avgRatingString: "4.1",
-            totalRatingsString: "10K+",
-            sla: {
-                deliveryTime: 37,
-                lastMileTravel: 4.8,
-                slaString: "35-40 mins"
-            }
-        }
-    },
-    {
-        info: {
-            id: "239069",
-            name: "McDonald's",
-            cloudinaryImageId: "f62564e14944753903849c4ef673af4d",
-            locality: "Virtous Mall",
-            areaName: "KR Puram",
-            costForTwo: "\u20B9400 for two",
-            cuisines: [
-                "Burgers",
-                "Beverages",
-                "Cafe",
-                "Desserts"
-            ],
-            avgRating: 4.3,
-            avgRatingString: "4.3",
-            totalRatingsString: "5K+",
-            sla: {
-                deliveryTime: 32,
-                lastMileTravel: 3.9,
-                slaString: "30-35 mins"
-            }
-        }
-    },
-    {
-        info: {
-            id: "810328",
-            name: "Polar bear",
-            cloudinaryImageId: "438ceb57212cc8476461e9753643126f",
-            locality: "Vignan Nagar",
-            areaName: "CV Raman Nagar",
-            costForTwo: "\u20B9350 for two",
-            cuisines: [
-                "Ice Cream",
-                "Ice Cream Cakes"
-            ],
-            avgRating: 4.5,
-            avgRatingString: "4.5",
-            totalRatingsString: "20+",
-            sla: {
-                deliveryTime: 19,
-                lastMileTravel: 1.5,
-                slaString: "15-20 mins"
-            }
-        }
-    },
-    {
-        info: {
-            id: "653628",
-            name: "Chinese Wok",
-            cloudinaryImageId: "e0839ff574213e6f35b3899ebf1fc597",
-            locality: "Phoenix Market City",
-            areaName: "Mahadevapura",
-            costForTwo: "\u20B9250 for two",
-            cuisines: [
-                "Chinese",
-                "Asian",
-                "Tibetan",
-                "Desserts"
-            ],
-            avgRating: 4,
-            avgRatingString: "4.0",
-            totalRatingsString: "100+",
-            sla: {
-                deliveryTime: 43,
-                lastMileTravel: 3.8,
-                slaString: "40-45 mins"
-            }
-        }
-    },
-    {
-        info: {
-            id: "285116",
-            name: "Dindigul Thalappakatti",
-            cloudinaryImageId: "qcoeeteu67eei7wlomdp",
-            locality: "Garudacharpalya",
-            areaName: "Whitefield",
-            costForTwo: "\u20B9600 for two",
-            cuisines: [
-                "Biryani",
-                "Barbecue",
-                "South Indian",
-                "Chinese",
-                "North Indian"
-            ],
-            avgRating: 4.1,
-            avgRatingString: "4.1",
-            totalRatingsString: "5K+",
-            sla: {
-                deliveryTime: 29,
-                lastMileTravel: 4.2,
-                slaString: "25-30 mins"
-            }
-        }
-    },
-    {
-        info: {
-            id: "5167",
-            name: "Theobroma",
-            cloudinaryImageId: "63dd75492c47fcec191132b8eb299ea5",
-            locality: "2nd stage",
-            areaName: "Indiranagar",
-            costForTwo: "\u20B9400 for two",
-            cuisines: [
-                "Bakery",
-                "Desserts",
-                "Beverages"
-            ],
-            avgRating: 4.6,
-            favourite: true,
-            avgRatingString: "4.6",
-            totalRatingsString: "10K+",
-            sla: {
-                deliveryTime: 34,
-                lastMileTravel: 5.6,
-                slaString: "30-35 mins"
-            }
-        }
-    },
-    {
-        info: {
-            id: "457308",
-            name: "Bakingo",
-            cloudinaryImageId: "e28bacacd405a62eb7f61d4b929ff9d6",
-            locality: "New Thipasandra",
-            areaName: "Indiranagar",
-            costForTwo: "\u20B9300 for two",
-            cuisines: [
-                "Bakery",
-                "Desserts",
-                "Beverages",
-                "Snacks"
-            ],
-            avgRating: 4.4,
-            avgRatingString: "4.4",
-            totalRatingsString: "1K+",
-            sla: {
-                deliveryTime: 30,
-                lastMileTravel: 5,
-                slaString: "30-35 mins"
-            }
-        }
-    }
-];
-exports.default = resList;
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const Shimmer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "shimmer-container",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.jsx",
+                lineNumber: 6,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.jsx",
+                lineNumber: 7,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.jsx",
+                lineNumber: 8,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.jsx",
+                lineNumber: 9,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.jsx",
+                lineNumber: 10,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.jsx",
+                lineNumber: 11,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.jsx",
+                lineNumber: 12,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.jsx",
+                lineNumber: 13,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Shimmer.jsx",
+        lineNumber: 5,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Shimmer;
+exports.default = Shimmer;
+var _c;
+$RefreshReg$(_c, "Shimmer");
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["APLPM","1xC6H","2Ew96"], "2Ew96", "parcelRequire6945")
+  $parcel$ReactRefreshHelpers$0b57.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["APLPM","1xC6H","2Ew96"], "2Ew96", "parcelRequire6945")
 
 //# sourceMappingURL=index.7826abd7.js.map
