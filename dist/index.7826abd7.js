@@ -2974,13 +2974,14 @@ const AppLayout = ()=>{
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=10.51694058302456&lng=76.24346863478422&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const json = await data.json();
         console.log(json);
+        setListOfRestaurants(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "AppLayout",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 25,
+                lineNumber: 28,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -2994,12 +2995,12 @@ const AppLayout = ()=>{
                     children: " Top rated restaurants"
                 }, void 0, false, {
                     fileName: "App.js",
-                    lineNumber: 35,
+                    lineNumber: 38,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 26,
+                lineNumber: 29,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3008,18 +3009,18 @@ const AppLayout = ()=>{
                         resData: restaurant
                     }, restaurant.info.id, false, {
                         fileName: "App.js",
-                        lineNumber: 39,
+                        lineNumber: 42,
                         columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 37,
+                lineNumber: 40,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "App.js",
-        lineNumber: 24,
+        lineNumber: 27,
         columnNumber: 5
     }, undefined);
 };
@@ -3028,7 +3029,7 @@ _c = AppLayout;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 48,
+    lineNumber: 51,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -27575,7 +27576,7 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _constants = require("../utils/constants");
 const ResCard = (props)=>{
     const { resData } = props;
-    const { cloudinaryImageId, name, cuisines, avgRating } = resData?.info;
+    const { cloudinaryImageId, name, cuisines, avgRating, sla, areaName } = resData?.info;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "res-card",
         children: [
@@ -27586,12 +27587,12 @@ const ResCard = (props)=>{
                     alt: "corner-house"
                 }, void 0, false, {
                     fileName: "src/components/ResCard.jsx",
-                    lineNumber: 12,
+                    lineNumber: 13,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/ResCard.jsx",
-                lineNumber: 11,
+                lineNumber: 12,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27601,51 +27602,138 @@ const ResCard = (props)=>{
                         children: name
                     }, void 0, false, {
                         fileName: "src/components/ResCard.jsx",
-                        lineNumber: 15,
+                        lineNumber: 16,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                width: "30",
+                                height: "30",
+                                viewBox: "0 0 20 20",
+                                fill: "none",
+                                role: "img",
+                                "aria-hidden": "true",
+                                strokeColor: "rgba(2, 6, 12, 0.92)",
+                                fillColor: "rgba(2, 6, 12, 0.92)",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("circle", {
+                                        cx: "10",
+                                        cy: "10",
+                                        r: "9",
+                                        fill: "url(#StoreRating20_svg__paint0_linear_32982_71567)"
+                                    }, void 0, false, {
+                                        fileName: "src/components/ResCard.jsx",
+                                        lineNumber: 28,
+                                        columnNumber: 13
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                        d: "M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z",
+                                        fill: "white"
+                                    }, void 0, false, {
+                                        fileName: "src/components/ResCard.jsx",
+                                        lineNumber: 34,
+                                        columnNumber: 13
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("defs", {
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("linearGradient", {
+                                            id: "StoreRating20_svg__paint0_linear_32982_71567",
+                                            x1: "10",
+                                            y1: "1",
+                                            x2: "10",
+                                            y2: "19",
+                                            gradientUnits: "userSpaceOnUse",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("stop", {
+                                                    "stop-color": "#21973B"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/ResCard.jsx",
+                                                    lineNumber: 47,
+                                                    columnNumber: 17
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("stop", {
+                                                    offset: "1",
+                                                    "stop-color": "#128540"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/ResCard.jsx",
+                                                    lineNumber: 48,
+                                                    columnNumber: 17
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/components/ResCard.jsx",
+                                            lineNumber: 39,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/components/ResCard.jsx",
+                                        lineNumber: 38,
+                                        columnNumber: 13
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/ResCard.jsx",
+                                lineNumber: 18,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                children: avgRating
+                            }, void 0, false, {
+                                fileName: "src/components/ResCard.jsx",
+                                lineNumber: 52,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                style: {
+                                    lineHeight: "5px",
+                                    fontSize: "30px"
+                                },
+                                children: "."
+                            }, void 0, false, {
+                                fileName: "src/components/ResCard.jsx",
+                                lineNumber: 53,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                children: sla.slaString
+                            }, void 0, false, {
+                                fileName: "src/components/ResCard.jsx",
+                                lineNumber: 54,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/ResCard.jsx",
+                        lineNumber: 17,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                         children: cuisines.join(", ")
                     }, void 0, false, {
                         fileName: "src/components/ResCard.jsx",
-                        lineNumber: 16,
+                        lineNumber: 56,
                         columnNumber: 9
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                xmlns: "http://www.w3.org/2000/svg",
-                                viewBox: "0 0 576 512",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                    fill: "#FFD43B",
-                                    d: "M287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.2 22.6c9 1.3 16.5 7.6 19.3 16.3s.5 18.1-5.9 24.5L433.6 328.4l26.2 155.6c1.5 9-2.2 18.1-9.7 23.5s-17.3 6-25.3 1.7l-137-73.2L151 509.1c-8.1 4.3-17.9 3.7-25.3-1.7s-11.2-14.5-9.7-23.5l26.2-155.6L31.1 218.2c-6.5-6.4-8.7-15.9-5.9-24.5s10.3-14.9 19.3-16.3l153.2-22.6L266.3 13.5C270.4 5.2 278.7 0 287.9 0zm0 79L235.4 187.2c-3.5 7.1-10.2 12.1-18.1 13.3L99 217.9 184.9 303c5.5 5.5 8.1 13.3 6.8 21L171.4 443.7l105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2L384.2 324.1c-1.3-7.7 1.2-15.5 6.8-21l85.9-85.1L358.6 200.5c-7.8-1.2-14.6-6.1-18.1-13.3L287.9 79z"
-                                }, void 0, false, {
-                                    fileName: "src/components/ResCard.jsx",
-                                    lineNumber: 19,
-                                    columnNumber: 13
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "src/components/ResCard.jsx",
-                                lineNumber: 18,
-                                columnNumber: 11
-                            }, undefined),
-                            avgRating
-                        ]
-                    }, void 0, true, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        style: {
+                            padding: "10px 0"
+                        },
+                        children: areaName
+                    }, void 0, false, {
                         fileName: "src/components/ResCard.jsx",
-                        lineNumber: 17,
+                        lineNumber: 57,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/ResCard.jsx",
-                lineNumber: 14,
+                lineNumber: 15,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/ResCard.jsx",
-        lineNumber: 10,
+        lineNumber: 11,
         columnNumber: 5
     }, undefined);
 };
