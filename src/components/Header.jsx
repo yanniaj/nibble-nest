@@ -3,18 +3,23 @@ import Search from "./Search";
 import { LOGO_URL } from "../utils/constants";
 import { useState } from "react";
 
-const Header = () => {
+const Header = ({ listOfRestaurants, sendDataToParent }) => {
   const [authState, setAuthState] = useState("Log in");
 
   return (
     <div className="header">
       <div className="logo-container">
-        <img src={LOGO_URL} alt="corner-house-logo" />
+        <a href="">
+          <img src={LOGO_URL} alt="corner-house-logo" />
+        </a>
       </div>
       <div className="nav-items">
         <ul>
           <li>Home</li>
-          <Search />
+          <Search
+            listOfRestaurants={listOfRestaurants}
+            sendDataToParent={sendDataToParent}
+          />
           <li>About us</li>
           <li>Contact us</li>
           <li>Cart</li>

@@ -7,10 +7,15 @@ import { useState, useEffect } from "react";
 
 const AppLayout = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
+  const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
     fetchData();
   }, []);
+
+  const handleDataFromSearch = (data) => {
+    setSearchResults(data);
+  };
 
   const fetchData = async () => {
     const data = await fetch(
@@ -19,6 +24,9 @@ const AppLayout = () => {
     const json = await data.json();
     console.log(json);
     setListOfRestaurants(
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+    setSearchResults(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
@@ -30,9 +38,12 @@ const AppLayout = () => {
     </>
   ) : (
     <div className="AppLayout">
-      <Header />
+      <Header
+        listOfRestaurants={listOfRestaurants}
+        sendDataToParent={handleDataFromSearch}
+      />
       <div className="main-container">
-        {listOfRestaurants.map((restaurant) => (
+        {searchResults.map((restaurant) => (
           <ResCard key={restaurant.info.id} resData={restaurant} />
         ))}
       </div>

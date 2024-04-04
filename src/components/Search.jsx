@@ -1,12 +1,20 @@
 import React from "react";
 import { useState } from "react";
 
-const Search = () => {
-  const [searchText, setSearchText] = useState(""); //Fill search-box value
+const Search = ({ listOfRestaurants, sendDataToParent }) => {
+  const [searchText, setSearchText] = useState("");
+
+  const sendData = () => {
+    console.log("Fetching restaurant data..");
+    const filteredRestaurant = listOfRestaurants.filter((res) =>
+      res.info.name.toLowerCase().includes(searchText.toLowerCase())
+    );
+    sendDataToParent(filteredRestaurant);
+  };
 
   return (
     <div className="search-bar">
-      <button className="button-search">
+      <button className="button-search" onClick={sendData}>
         <img
           src={require("../../images/magnifying-glass-solid.svg")}
           alt="Search"
@@ -20,6 +28,11 @@ const Search = () => {
         style={{ color: "white" }}
         value={searchText}
         onChange={(e) => setSearchText(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") {
+            sendData();
+          }
+        }}
       />
     </div>
   );
