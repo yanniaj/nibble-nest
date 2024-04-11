@@ -1,0 +1,29 @@
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  width: 90vw;
+}
+
+.left-container {
+  width: 60%;
+  justify-items: center;
+  text-align: center;
+}
+
+.left-container h1 {
+  font-size: 40px;
+}
+
+.left-container p {
+  font-size: 28px;
+}
+
+.left-container > img {
+  width: 30vw;
+  height: auto;
+}
+
+.right-container {
+  width: 30%;
+}

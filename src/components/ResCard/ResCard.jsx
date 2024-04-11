@@ -1,5 +1,6 @@
 import React from "react";
-import { CDN_URL } from "../utils/constants";
+import { CDN_URL } from "../../utils/constants";
+import "./ResCard.css";
 import { useState, useEffect } from "react";
 
 const ResCard = (props) => {

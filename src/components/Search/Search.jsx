@@ -1,4 +1,5 @@
 import React from "react";
+import "./Search.css";
 import { useState } from "react";
 
 const Search = ({ listOfRestaurants, sendDataToParent }) => {
@@ -16,7 +17,7 @@ const Search = ({ listOfRestaurants, sendDataToParent }) => {
     <div className="search-bar">
       <button className="button-search" onClick={sendData}>
         <img
-          src={require("../../images/magnifying-glass-solid.svg")}
+          src={require("../../../images/magnifying-glass-solid.svg")}
           alt="Search"
         />
       </button>

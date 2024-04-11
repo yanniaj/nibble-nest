@@ -1,0 +1,22 @@
+.shimmer-container {
+  width: 90vw;
+  margin-left: 50px;
+  margin-top: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 10;
+}
+
+.shimmer-card {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(150, 150, 150, 0.1),
+    0 6px 20px 0 rgba(150, 150, 150, 0.25);
+  border-radius: 10%;
+  max-width: 280px;
+  width: 100%;
+  height: 357px;
+}

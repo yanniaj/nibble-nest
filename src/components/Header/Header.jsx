@@ -1,6 +1,8 @@
 import React from "react";
-import Search from "./Search";
-import { LOGO_URL } from "../utils/constants";
+import Search from "../Search/Search";
+import "./Header.css";
+
+import { LOGO_URL } from "../../utils/constants";
 import { useState } from "react";
 
 const Header = ({ listOfRestaurants, sendDataToParent }) => {

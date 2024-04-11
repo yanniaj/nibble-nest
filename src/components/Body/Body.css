@@ -1,0 +1,9 @@
+.main-container {
+  width: 90vw;
+  margin-left: 50px;
+  margin-top: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 10;
+}

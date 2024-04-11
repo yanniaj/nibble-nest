@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  /* padding: 20px 20px 0 20px; */
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.logo-container a img {
+  flex-grow: 1;
+  border-radius: 50%;
+  width: 60px;
+  padding: 10px;
+}
+
+.nav-items > ul {
+  flex-grow: 9;
+  display: flex;
+  list-style: none;
+  padding-right: 50px;
+  align-items: center;
+  cursor: pointer;
+  gap: 80;
+}
+
+.nav-items > ul > li {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: "Basis Grotesque Pro", Arial, sans-serif;
+}
