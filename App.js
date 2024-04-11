@@ -1,55 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Header from "./src/components/Header";
-import ResCard from "./src/components/ResCard";
-import Shimmer from "./src/components/Shimmer";
-import { useState, useEffect } from "react";
+import Body from "./src/components/Body";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const AppLayout = () => {
-  const [listOfRestaurants, setListOfRestaurants] = useState([]);
-  const [searchResults, setSearchResults] = useState([]);
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const handleDataFromSearch = (data) => {
-    setSearchResults(data);
-  };
-
-  const fetchData = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=10.51694058302456&lng=76.24346863478422&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
-    const json = await data.json();
-    console.log(json);
-    setListOfRestaurants(
-      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
-    setSearchResults(
-      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
-  };
-
-  return listOfRestaurants.length === 0 ? ( // Conditional rendering
-    <>
-      <Header />
-      <Shimmer />
-    </>
-  ) : (
-    <div className="AppLayout">
-      <Header
-        listOfRestaurants={listOfRestaurants}
-        sendDataToParent={handleDataFromSearch}
-      />
-      <div className="main-container">
-        {searchResults.map((restaurant) => (
-          <ResCard key={restaurant.info.id} resData={restaurant} />
-        ))}
-      </div>
-    </div>
-  );
+  return <Body />;
 };
+
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: "",
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
